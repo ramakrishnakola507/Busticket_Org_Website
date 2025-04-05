@@ -1,0 +1,138 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    background: #000;
+    color: #fff; 
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+.form-title {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 28px;
+    font-weight: bold;
+    color: #fe6c00; 
+}
+
+.form-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.form-box {
+    background: #fff; 
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(255, 108, 0, 0.4); 
+    max-width: 400px;
+    width: 100%;
+}
+
+
+.form-box h2 {
+    text-align: center;
+    color: #fe6c00; 
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #000; 
+    margin-bottom: 5px;
+}
+
+.required {
+    color: red;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #fe6c00; 
+    border-radius: 5px;
+    font-size: 14px;
+    color: #000; 
+   
+}
+
+textarea {
+    resize: none;
+    height: 80px;
+}
+
+
+input::placeholder, textarea::placeholder {
+    color: white;
+}
+
+
+.btn-submit {
+    background: #fe6c00; 
+    color: white;
+    font-weight: 600;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: 0.3s;
+    width: 100%;
+}
+
+.btn-submit:hover {
+    background: #000; 
+    color: #fe6c00; 
+}
+
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-bottom: 15px;
+    margin-right: 90px;
+}
+
+.checkbox-group input {
+    margin-right: 5px;
+}
+
+.forgot-link {
+    color: #fe6c00;
+    text-decoration: none;
+}
+
+.forgot-link:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+    .form-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}

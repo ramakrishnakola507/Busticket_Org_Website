@@ -1,0 +1,76 @@
+.date-picker-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px; /* Updated max-width */
+  width: 100%;
+}
+
+.date-picker-label {
+  color: white;
+  font-size: 14px; /* Updated font size */
+  margin-bottom: 5px;
+}
+.date-picker-input::-webkit-calendar-picker-indicator {
+  filter: invert(1); /* Inverts the color, making black icons white */
+  cursor: pointer;
+}
+.date-picker-input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid white; /* Updated border color */
+  border-radius: 5px;
+  font-size: 14px; /* Updated font size */
+  outline: none;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.7); /* White text */
+  background-color: var(--input-inner-color);/* Keep background black */
+}
+
+.icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: white !important;
+}
+
+.icon:hover {
+  color:white;
+}
+
+.date-picker-input:focus {
+  border-color: #fe6c00;
+  box-shadow: 0 0 5px #fe6c00;
+}
+
+/* 📌 Responsive Styles */
+@media (max-width: 768px) {
+  .date-picker-container {
+      max-width: 100%; /* Full width on tablets */
+  }
+  
+  .date-picker-label {
+      font-size: 11px; /* Slightly smaller text */
+  }
+  
+  .date-picker-input {
+      font-size: 11px; /* Slightly smaller text */
+      padding: 6px; /* Adjust padding */
+  }
+}
+
+@media (max-width: 480px) {
+  .date-picker-container {
+      max-width: 100%; /* Full width on small devices */
+  }
+
+  .date-picker-label {
+      font-size: 10px; /* Smaller font for mobile */
+  }
+
+  .date-picker-input {
+      font-size: 10px; /* Smaller text */
+      padding: 5px; /* Adjust padding */
+  }
+}

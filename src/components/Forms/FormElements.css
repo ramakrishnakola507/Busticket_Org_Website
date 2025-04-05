@@ -1,0 +1,132 @@
+.form-container {
+  font-family: "Arial", sans-serif;
+  padding: 20px;
+  background: #121212;
+  color: white;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(255, 165, 0, 0.3);
+}
+
+h2 {
+  color: white;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 24px;
+}
+
+.form-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.input-fields, .textarea-fields, .date-picker, .select-input {
+  background: #1e1e1e;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(255, 165, 0, 0.3);
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  border: 2px solid #fe6c00;
+  border-radius: 6px;
+  background: #2a2a2a;
+  color: white;
+  font-weight: normal;
+  height: 40px;
+  resize: none;
+  transition: all 0.3s;
+}
+
+textarea {
+  height: 50px;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: white;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+input::placeholder, textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Date Picker and Country Select with Orange Background */
+.date-picker input, .select-input select {
+  background: #fe6c00 !important;
+  color: white;
+  font-weight: bold;
+  border: 2px solid #fe6c00;
+}
+
+/* Radio Button and Checkbox Styling */
+.radio-container, .checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+input[type="radio"], input[type="checkbox"] {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid white;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  background: transparent;
+  transition: all 0.3s;
+}
+
+input[type="radio"]:checked, input[type="checkbox"]:checked {
+  background-color: #fe6c00;
+  border-color: #fe6c00;
+}
+
+input[type="checkbox"] {
+  border-radius: 4px;
+}
+
+input[type="radio"]::before, input[type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+input[type="checkbox"]::before {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+}
+
+input[type="radio"]:checked::before, input[type="checkbox"]:checked::before {
+  opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .form-section {
+      grid-template-columns: 1fr;
+  }
+}

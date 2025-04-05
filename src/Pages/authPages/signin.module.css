@@ -1,0 +1,114 @@
+
+#loginContainer{
+    position: relative;
+    background-color: var(--input-inner-color);
+    
+}
+
+#loginDiv{
+    position: absolute;
+    width: 70%;
+    height: 80%;
+    padding: 0px 15px;
+    left: 5%;
+    top: 50%;
+    box-shadow: 0px 0px 20px #1c1c1c;
+    transform: translate(-16%, -50%);
+    animation: moveLeftToRight 2s ; /* Add the animation */
+    animation-timing-function:ease-out;
+}
+
+#btnsignin{
+    background-color: #fb6724;
+    max-width: 500px;
+    width: 80%;
+    height: 40px;
+    color:#d9d9d9;
+}
+#googleBtnContain{
+    position: relative;
+}
+#googleBtnContain p{
+    position: absolute;
+    top:-13px;
+    background-color: #1e1611;
+    color:#d9d9d9;
+    width: 30px;
+    text-align: center;
+}
+#btngoogle{
+    background-color: #5d5d5d;
+    max-width: 500px;
+    width: 80%;
+    height: 40px;
+    color: #d9d9d9;
+    border:1px solid #d9d9d9;
+}
+
+@keyframes moveLeftToRight {
+    0% {
+        left: -10%;
+    }
+
+    100% {
+        left: 5%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #loginDiv{
+        left: 0;
+        top: 50%;
+        width: 70%;
+        transform: translate(-50%, -50%);
+        animation: moveLeftToRight 2s ; /* Add the animation */
+        animation-timing-function:ease-out;
+    }
+  }
+@media screen and (max-width: 769px) {
+    #loginDiv{
+        left: 0;
+        top: 50%;
+        width: 100%;
+        transform: translate(-50%, -50%);
+        animation: moveLeftToRight 2s ; /* Add the animation */
+        animation-timing-function:ease-out;
+    }
+
+  }
+@media screen and (max-width: 576px) {
+    #loginDiv{
+        left: 0;
+        top: 50%;
+        width: 90vw;
+        padding: 0;
+        transform: translate(-50%, -50%);
+        animation: moveLeftToRight 2s ; /* Add the animation */
+        animation-timing-function:ease-out;
+    }
+  }
+@media screen and (max-width: 320px) {
+    #loginDiv{
+        left: 0;
+        top: 50%;
+        width: 100wv;
+        transform: translate(-50%, -50%);
+        animation: moveLeftToRight 2s ; /* Add the animation */
+        animation-timing-function:ease-out;
+    }
+    #btngoogle{
+       font-size: 10px;
+       font-weight: bold;
+    }
+  }
+
+  @media (max-width: 768px) {
+    #btnsignin {
+      width: 100%;
+      font-size: 14px;
+      padding: 12px;
+    }
+  }
+  
+
+  
