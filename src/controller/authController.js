@@ -2,6 +2,7 @@ import { useMutation } from '@tanstack/react-query';
 import { useAuth } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import {apiUrlsConstant} from "../constant/apiUrlsContant"
 
 export const useLogin = () => {
     const { login } = useAuth();
@@ -11,7 +12,7 @@ export const useLogin = () => {
       mutationFn: async (credentials) => {
         try {
           const response = await axios.post(
-            'http://localhost:2025/api/auth/login-god',
+            `${apiUrlsConstant.baseAddr}/${apiUrlsConstant.godlogin}`,
             credentials,
             {
               headers: {
