@@ -6,6 +6,6 @@ export const apiUrlsConstant = {
 
     createorganisationurl:'org/organizations',
     createsuperadminurl:'org/superadmin',
-    godlogin:'auth/login-god',
+    godlogin:'auth/login-admin',
    
 }
