@@ -7,6 +7,8 @@ import ProtectedRoute from './utils/ProtectedRoute';
 import SignIn from './Pages/authPages/SignIn';
 import ContentMain from './components/ContentMain/ContentMain';
 import '../src/layout/Content/Content.css';
+import Otp from './Pages/authPages/Otp';
+import NotFound from './Pages/authPages/NotFound';
 
 
 
@@ -17,6 +19,12 @@ function App() {
       {/* Auth routes - no sidebar/header */}
       <Route element={<AuthLayout />}>
         <Route path="/signin" element={<SignIn />} />
+        {/* OTP Verification Page */}
+        <Route path="/Otp" element={<Otp />} />
+        {/* NotFound route must be last */}
+        <Route path="*" element={<NotFound />} />
+        
+
         {/* Add other auth routes here (register, forgot password, etc.) */}
       </Route>
 
