@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import './Otp.css';
+import axios from "axios";
 function Otp() {
   const [otp, setOtp] = useState(["", "", "", ""]);
   const inputRefs = useRef([]);
@@ -33,13 +34,19 @@ function Otp() {
     }
   };
 
-  const handleSubmit = () => {
-    if (otp.join("") === "1234") {
-      alert("OTP Verified Successfully!");
-    } else {
-      navigate("/404");
-    }
-  };
+
+const handleSubmit = async () => {
+  try {
+    const response = await axios.post("http://localhost:5000/api/otp/verify", {
+      otp: otp.join(""),
+    });
+    alert(response.data.message);
+  } catch (error) {
+    alert("Invalid OTP. Redirecting...");
+    navigate("/404");
+  }
+};
+
 
   return (
     <div className="container">
